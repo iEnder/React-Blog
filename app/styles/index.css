@@ -37,11 +37,12 @@ body {
   background-color: #fff;
   position: fixed;
   height: 100vh;
-  left: 0;
   top: 0;
+  left: 0;
   color: #0055dd;
-  width: 16vw;
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4); }
+  width: 17em;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+  z-index: 999; }
   #Navmenu .menu-header {
     background-color: #448cff;
     height: 10%;
@@ -52,8 +53,8 @@ body {
     #Navmenu .menu-header .fa {
       color: white;
       position: absolute;
-      top: 5px;
-      left: 15px;
+      top: 10px;
+      left: 30px;
       font-size: 2.3em; }
     #Navmenu .menu-header span {
       font-weight: 500;
@@ -71,6 +72,21 @@ body {
         #Navmenu ul li a span:hover {
           color: #77abff; }
 
+/*
+  React MenuSlide
+*/
+.menuSlide-enter {
+  transition: 0.5s;
+  transform: translateX(-120%); }
+  .menuSlide-enter.menuSlide-enter-active {
+    transform: translateX(0%); }
+
+.menuSlide-leave {
+  transition: 0.5s;
+  transform: translateX(0%); }
+  .menuSlide-leave.menuSlide-leave-active {
+    transform: translateX(-120%); }
+
 #navDim {
   transition: background-color 0.5s;
   width: 100vw;
@@ -78,8 +94,22 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1; }
+  z-index: 0; }
+
+/*
+  React navScreenDim
+*/
+.navScreenDim-enter {
+  transition: 0.2s;
+  background-color: transparent !important; }
+  .navScreenDim-enter.navScreenDim-enter-active {
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.navScreenDim-leave {
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.4) !important; }
+  .navScreenDim-leave.navScreenDim-leave-active {
+    background-color: transparent !important; }
 
 /*# sourceMappingURL=index.css.map */
