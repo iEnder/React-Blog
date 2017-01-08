@@ -6,13 +6,11 @@ const IndexRoute = ReactRouter.IndexRoute;
 const hashHistory = ReactRouter.hashHistory;
 const Main = require('../components/Main');
 const Home = require('../components/Home');
-const Nav = require('../components/Navbar');
 
 const routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
-      <IndexRoute component={Nav} />
-        <Route path='/car' component={Home}></Route>
+      <IndexRoute component={Home} />
     </Route>
   </Router>
 );

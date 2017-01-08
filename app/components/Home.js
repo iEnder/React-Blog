@@ -1,9 +1,15 @@
 const React = require('react');
 
+/*
+  Home
+*/
+
 class Home extends React.Component {
   render() {
     return (
-      <h1>Hi there</h1>
+      <div>
+        <h1>Home Page</h1>
+      </div>
     )
   }
 }
