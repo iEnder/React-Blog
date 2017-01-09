@@ -44,15 +44,16 @@ Nav Menu
 */
 
 class Navmenu extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.componentWillMount = this.componentWillMount.bind(this);
-  }
-  componentWillMount() {
-    console.log("Bye!");
-  }
   render() {
+
+    const menuItems = {
+      home: ["#", "home", "Home"],
+      popularStories: ["#", "fire", "Hot"],
+      allStories: ["#", "book", "Stories"],
+      github: ["#", "github", "Github"],
+      aboutPage: ["#", "info-circle", "About"],
+    };
+
     return (
       <div>
         <CSSTransisitionGroup
@@ -70,46 +71,36 @@ class Navmenu extends React.Component {
                   <span>React Blog</span>
                 </div>
                 <ul>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-home"></i><span>Home</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-fire"></i><span>Hot</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-book"></i><span>Stories</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-github"></i><span>Github</span></a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-info-circle"></i><span>About</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  : null
-                }
-              </CSSTransisitionGroup>
-              <CSSTransisitionGroup
-                transitionName="navScreenDim"
-                transitionEnterTimeout={200}
-                transitionLeaveTimeout={300}
-                transitionAppearTimeout={200}
-                transitionAppear={true}
-                component="div">
-                  {this.props.active ? <div id="navDim" onClick={this.props.closeMenu}></div> : null}
-                </CSSTransisitionGroup>
+                  {
+                    Object.keys(menuItems).map(function(item, index) {
+                      let [url, icon, text] = menuItems[item];
+                      return (
+                        <li key={`menuItem-${index}`}>
+                          <a href={ url }>
+                            <i className={ `fa fa-${ icon }` }></i>
+                            <span>{ text }</span>
+                          </a>
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
               </div>
-            )
-          }
-        }
+              : null
+            }
+          </CSSTransisitionGroup>
+          <CSSTransisitionGroup
+            transitionName="navScreenDim"
+            transitionEnterTimeout={200}
+            transitionLeaveTimeout={300}
+            transitionAppearTimeout={200}
+            transitionAppear={true}
+            component="div">
+            {this.props.active ? <div id="navDim" onClick={this.props.closeMenu}></div> : null}
+          </CSSTransisitionGroup>
+        </div>
+      )
+    }
+  }
 
-        module.exports = Navbar;
+  module.exports = Navbar;

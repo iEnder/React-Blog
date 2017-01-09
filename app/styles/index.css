@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic");
 body {
   padding: 0;
-  margin: 55px 0 0 0; }
+  margin: 55px 0 0 0;
+  background: #f2f2f2;
+  background: -o-linear-gradient(left, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%);
+  background: -moz-linear-gradient(left, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%);
+  background: -webkit-linear-gradient(left, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%);
+  background: linear-gradient(to right, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%); }
 
 #Navbar {
   position: fixed;
@@ -39,10 +44,10 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  color: #0055dd;
-  width: 17em;
+  color: #000711;
+  width: 20em;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
-  z-index: 999; }
+  z-index: 9999; }
   #Navmenu .menu-header {
     background-color: #448cff;
     height: 10%;
@@ -69,22 +74,30 @@ body {
         text-decoration: none; }
         #Navmenu ul li a .fa {
           margin: 0 1.4em; }
-        #Navmenu ul li a span:hover {
-          color: #77abff; }
+        #Navmenu ul li a span {
+          color: black; }
+          #Navmenu ul li a span:hover {
+            color: #77abff; }
 
 /*
   React MenuSlide
 */
 .menuSlide-enter {
-  transition: 0.5s;
+  transition: 0.5s ease;
+  -webkit-transform: translateX(-120%);
+  -ms-transform: translateX(-120%);
   transform: translateX(-120%); }
   .menuSlide-enter.menuSlide-enter-active {
     transform: translateX(0%); }
 
 .menuSlide-leave {
-  transition: 0.5s;
+  transition: 0.5s ease;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
   transform: translateX(0%); }
   .menuSlide-leave.menuSlide-leave-active {
+    -webkit-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
     transform: translateX(-120%); }
 
 #navDim {
@@ -95,7 +108,7 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 0; }
+  z-index: 999; }
 
 /*
   React navScreenDim
@@ -111,5 +124,33 @@ body {
   background-color: rgba(0, 0, 0, 0.4) !important; }
   .navScreenDim-leave.navScreenDim-leave-active {
     background-color: transparent !important; }
+
+#articleButton {
+  font-family: 'Roboto', sans-serif;
+  background-color: #448cff;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2em;
+  border-radius: 100%;
+  color: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  transition: 0.5s ease;
+  z-index: -1; }
+  #articleButton:hover {
+    background-color: #116dff;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35);
+    transform: scale(1.05); }
+  #articleButton:active {
+    transform: scale(1);
+    background-color: #5e9cff; }
+
+#main {
+  font-family: 'Roboto', sans-serif;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

@@ -12,6 +12,7 @@ class Main extends React.Component {
        <div className='main-container'>
          <Navbar />
          {this.props.children}
+         <div id="articleButton">+</div>
        </div>
      )
   }
