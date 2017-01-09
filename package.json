@@ -6,7 +6,8 @@
   "scripts": {
     "production": "webpack -p",
     "start": "webpack-dev-server",
-    "start --hot": "webpack-dev-server --hot --inline"
+    "start --hot": "webpack-dev-server --hot --inline",
+    "bStart": "browsersync start"
   },
   "repository": {
     "type": "git",

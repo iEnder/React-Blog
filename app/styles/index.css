@@ -2,6 +2,8 @@
 body {
   padding: 0;
   margin: 55px 0 0 0;
+  position: relative;
+  z-index: -1;
   background: #f2f2f2;
   background: -o-linear-gradient(left, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%);
   background: -moz-linear-gradient(left, #f2f2f2 0%, #fcfcfc 45%, #efefef 100%);
@@ -142,15 +144,89 @@ body {
   transition: 0.5s ease;
   z-index: -1; }
   #articleButton:hover {
-    background-color: #116dff;
+    background-color: #2b7cff;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35);
     transform: scale(1.05); }
   #articleButton:active {
     transform: scale(1);
     background-color: #5e9cff; }
 
-#main {
+#app {
+  position: relative;
+  z-index: -1; }
+
+.main-container {
+  position: relative;
+  z-index: -1; }
+
+#Home {
   font-family: 'Roboto', sans-serif;
-  text-align: center; }
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 4em 1em 0 1em;
+  position: relative;
+  z-index: -1; }
+
+.storyCard {
+  transition: 0.4s;
+  overflow: hidden;
+  margin: 1em 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: left; }
+  .storyCard img {
+    width: 100%;
+    height: 60%; }
+  .storyCard.cardMain {
+    height: 17em;
+    width: 66%; }
+    .storyCard.cardMain .storyButton {
+      bottom: 32%; }
+  .storyCard.cardNorm {
+    width: 32%; }
+    .storyCard.cardNorm:not(:nth-child(2)) {
+      height: 13em; }
+    .storyCard.cardNorm:nth-child(2) .storyButton {
+      bottom: 32%; }
+  .storyCard > div {
+    height: 40%;
+    padding: 0 1em; }
+    .storyCard > div p {
+      font-size: 1.1em;
+      color: #555555; }
+    .storyCard > div .fa-ellipsis-v {
+      transition: 0.5s;
+      color: black;
+      position: absolute;
+      right: 1em;
+      bottom: 1.5em;
+      color: #aaa; }
+      .storyCard > div .fa-ellipsis-v:hover {
+        color: #777; }
+  .storyCard .storyButton {
+    transition: 0.5s;
+    text-align: center;
+    height: 3em;
+    width: 3em;
+    line-height: 3em;
+    border-radius: 100%;
+    background-color: #448cff;
+    color: white;
+    position: absolute;
+    right: 1em;
+    bottom: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
+    .storyCard .storyButton:hover {
+      background-color: #2b7cff;
+      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35);
+      transform: scale(1.05); }
+  .storyCard:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01); }
 
 /*# sourceMappingURL=index.css.map */
