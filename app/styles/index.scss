@@ -102,7 +102,7 @@ body {
 }
 
 /*
-  React MenuSlide
+React MenuSlide
 */
 .menuSlide-enter {
   transition: 0.5s ease;
@@ -138,7 +138,7 @@ body {
 }
 
 /*
-  React navScreenDim
+React navScreenDim
 */
 
 .navScreenDim-enter {
@@ -221,19 +221,19 @@ body {
     height: 60%;
   }
   &.cardMain {
-    height: 17em;
+    height: 23em;
     width: 66%;
     .storyButton {
-      bottom: 32%;
+      bottom: 33%;
     }
   }
   &.cardNorm {
     &:not(:nth-child(2)) {
-      height: 13em;
+      height: 17em;
     }
     &:nth-child(2){
       .storyButton {
-        bottom: 32%;
+        bottom: 33%;
       }
     }
     width: 32%;
@@ -249,9 +249,11 @@ body {
       transition: 0.5s;
       color: black;
       position: absolute;
-      right: 1em;
-      bottom: 1.5em;
+      font-size: 1.3em;
+      right: 0.1em;
+      bottom: 0.2em;
       color: #aaa;
+      padding: 10px;
       &:hover {
         color: #777;
       }
@@ -268,7 +270,7 @@ body {
     color: white;
     position: absolute;
     right: 1em;
-    bottom: 30%;
+    bottom: 32%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     &:hover {
       background-color: darken($mainUi, 5%);
@@ -279,5 +281,68 @@ body {
   &:hover {
     box-shadow: 0 8px 12px rgba(0,0,0,0.15);
     transform: scale(1.01);
+  }
+  .shareSocialPopup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+    span:nth-child(1) {
+      width: 90%;
+      text-align: center;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      a {
+        color: white;
+        line-height: 2.5em;
+        width: 2.5em;
+        height: 2.5em;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.55);
+        border-radius: 100%;
+        &:nth-child(1) {
+          background-color: #d34836;
+        }
+        &:nth-child(2) {
+          background-color: #0084b4;
+        }
+        &:nth-child(3) {
+          background-color: #3b5998;
+        }
+        &:nth-child(4) {
+          background-color: #606a7a;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+React Social Pop up
+*/
+
+.openSocial-enter {
+  transition: 400ms ease;
+  transform: translateY(100%);
+  &.openSocial-enter-active {
+    transform: translateY(0%);
+  }
+}
+
+.openSocial-leave {
+  transition: 400ms;
+  transform: translateY(0%);
+  &.openSocial-leave-active {
+    transform: translateY(100%);
   }
 }
