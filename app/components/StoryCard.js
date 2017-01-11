@@ -36,6 +36,7 @@ class Storycard extends React.Component {
           transitionAppear={true}>
           {this.state.socialOpen ?
             <div className="shareSocialPopup" onClick={this.toggleSocial}>
+              <p>Share this story:</p>
               <span>
                 <a href="#"><i className="fa fa-google-plus"></i></a>
                 <a href="#"><i className="fa fa-twitter"></i></a>

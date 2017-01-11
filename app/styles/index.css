@@ -23,7 +23,7 @@ body {
   background-color: #448cff;
   color: white;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
   #Navbar > span {
     margin-right: auto;
     margin-left: 1.3em;
@@ -48,7 +48,7 @@ body {
   left: 0;
   color: #000711;
   width: 20em;
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
   z-index: 9999; }
   #Navmenu .menu-header {
     background-color: #448cff;
@@ -145,10 +145,8 @@ React navScreenDim
   z-index: -1; }
   #articleButton:hover {
     background-color: #2b7cff;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35);
-    transform: scale(1.05); }
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35); }
   #articleButton:active {
-    transform: scale(1);
     background-color: #5e9cff; }
 
 #app {
@@ -225,11 +223,9 @@ React navScreenDim
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
     .storyCard .storyButton:hover {
       background-color: #2b7cff;
-      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35);
-      transform: scale(1.05); }
+      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.35); }
   .storyCard:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-    transform: scale(1.01); }
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); }
   .storyCard .shareSocialPopup {
     position: absolute;
     top: 0;
@@ -240,9 +236,10 @@ React navScreenDim
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: 20%; }
-    .storyCard .shareSocialPopup span:nth-child(1) {
+    .storyCard .shareSocialPopup span:nth-child(2) {
       width: 90%;
       text-align: center;
       display: -webkit-flex;
@@ -250,20 +247,20 @@ React navScreenDim
       display: flex;
       justify-content: space-around;
       color: white; }
-      .storyCard .shareSocialPopup span:nth-child(1) a {
+      .storyCard .shareSocialPopup span:nth-child(2) a {
         color: white;
         line-height: 2.5em;
         width: 2.5em;
         height: 2.5em;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.55);
         border-radius: 100%; }
-        .storyCard .shareSocialPopup span:nth-child(1) a:nth-child(1) {
+        .storyCard .shareSocialPopup span:nth-child(2) a:nth-child(1) {
           background-color: #d34836; }
-        .storyCard .shareSocialPopup span:nth-child(1) a:nth-child(2) {
+        .storyCard .shareSocialPopup span:nth-child(2) a:nth-child(2) {
           background-color: #0084b4; }
-        .storyCard .shareSocialPopup span:nth-child(1) a:nth-child(3) {
+        .storyCard .shareSocialPopup span:nth-child(2) a:nth-child(3) {
           background-color: #3b5998; }
-        .storyCard .shareSocialPopup span:nth-child(1) a:nth-child(4) {
+        .storyCard .shareSocialPopup span:nth-child(2) a:nth-child(4) {
           background-color: #606a7a; }
 
 /*
@@ -280,5 +277,15 @@ React Social Pop up
   transform: translateY(0%); }
   .openSocial-leave.openSocial-leave-active {
     transform: translateY(100%); }
+
+@media (max-width: 800px) {
+  .storyCard.cardMain {
+    width: 100%; }
+  .storyCard.cardNorm {
+    width: 49%;
+    height: 17em; } }
+@media (max-width: 500px) {
+  .storyCard.cardNorm {
+    width: 100%; } }
 
 /*# sourceMappingURL=index.css.map */

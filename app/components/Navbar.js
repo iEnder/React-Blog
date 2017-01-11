@@ -68,7 +68,7 @@ class Navmenu extends React.Component {
               <div id="Navmenu">
                 <div className="menu-header">
                   <i className="fa fa-close" onClick={this.props.closeMenu}></i>
-                  <span>React Blog</span>
+                  <span>React Page</span>
                 </div>
                 <ul>
                   {
